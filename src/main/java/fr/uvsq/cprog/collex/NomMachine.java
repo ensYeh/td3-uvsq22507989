@@ -1,4 +1,4 @@
-package dns;
+// package dns;
 
 import java.util.Objects;
 

@@ -2,23 +2,50 @@ package fr.uvsq.cprog.collex;
 
 import java.util.Objects;
 
-   private final String ip;
+public class AdresseIP {
+    private final String ip;
 
-    public Adress
+    public AdresseIP(String ip) {
+        if (ip == null || ip.isEmpty())
+            throw new IllegalArgumentException("IP ne peut pas être vide");
 
-      throw new IllegalArgumentException("IP ne pString[]parts=ip.split("\\.");if parts.lent != 4)throw nwIllegalArgumentExceping p : parts) {        it v 
+        String[] parts = ip.split("\\.");
+        if (parts.length != 4)
+            throw new IllegalArgumentException("IP invalide : " + ip);
 
-        } catch (Numbr        th 
+        for (String p : parts) {
+            try {
+                int val = Integer.parseInt(p);
+                if (val < 0 || val > 255)
+                    throw new IllegalArgumentException("IP invalide : " + ip);
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("IP invalide : " + ip, e);
+            }
+        }
+        this.ip = ip;
+    }
 
-    this. }
+    public String getIp() {
+        return ip;
+    }
 
-    return ip;@
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (!(o instanceof AdresseIP))
+            return false;
+        AdresseIP adresseIP = (AdresseIP) o;
+        return ip.equals(adresseIP.ip);
+    }
 
-    if (t     if (!(o instanceo AdresseIP adresseIP = (A 
+    @Override
+    public int hashCode() {
+        return Objects.hash(ip);
+    }
 
-public in     return Objects.hash(p
-
- public String toString() {
+    @Override
+    public String toString() {
         return ip;
     }
 }
