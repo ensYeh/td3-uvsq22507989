@@ -1,10 +1,8 @@
 package fr.uvsq.cprog.collex.commandes;
 
-// package fr.uvsq.cprog.dns.commandes;
-
-import fr.uvsq.cprog.dns.Commande;
-import fr.uvsq.cprog.dns.Dns;
-import fr.uvsq.cprog.dns.DnsItem;
+import fr.uvsq.cprog.collex.Dns;
+import fr.uvsq.cprog.collex.DnsItem;
+import fr.uvsq.cprog.collex.commandes.Commande; // ← bon import
 import java.util.List;
 
 public class CommandeListeDomaine implements Commande {
@@ -27,7 +25,10 @@ public class CommandeListeDomaine implements Commande {
 
       StringBuilder sb = new StringBuilder();
       for (DnsItem item : items) {
-         sb.append(item.getAdresseIP()).append(" ").append(item.getNomMachine()).append("\n");
+         sb.append(item.getIp())
+               .append(" ")
+               .append(item.getNom())
+               .append("\n");
       }
       return sb.toString().trim();
    }

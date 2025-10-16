@@ -2,6 +2,13 @@ package fr.uvsq.cprog.collex;
 
 import java.util.Scanner;
 
+import fr.uvsq.cprog.collex.commandes.Commande;
+import fr.uvsq.cprog.collex.commandes.CommandeQuitter;
+import fr.uvsq.cprog.collex.commandes.CommandeAddItem;
+import fr.uvsq.cprog.collex.commandes.CommandeListeDomaine;
+import fr.uvsq.cprog.collex.commandes.CommandeRechercheNom;
+import fr.uvsq.cprog.collex.commandes.CommandeRechercheIP;
+
 public class DnsTUI {
    private final Dns dns;
    private final Scanner scanner;
@@ -35,7 +42,7 @@ public class DnsTUI {
       if (cmd.equals("add")) {
          if (tokens.length != 3)
             return () -> "ERREUR : Usage : add <ip> <nom.qualifie>";
-         return new CommandeAjouterItem(dns, tokens[1], tokens[2]);
+         return new CommandeAddItem(dns, tokens[1], tokens[2]);
       }
 
       // ls [-a] <domaine>
@@ -52,7 +59,7 @@ public class DnsTUI {
          }
          if (!domaine.matches(REGEX_FQDN))
             return () -> "ERREUR : Domaine invalide";
-         return new CommandeListerDomaine(dns, domaine, triParAdresse);
+         return new CommandeListeDomaine(dns, domaine, triParAdresse);
       }
 
       // ligne seule : IP -> nom

@@ -1,15 +1,11 @@
 package fr.uvsq.cprog.collex.commandes;
 
-// package fr.uvsq.cprog.dns.commandes;
+import fr.uvsq.cprog.collex.AdresseIP;
+import fr.uvsq.cprog.collex.Dns;
+import fr.uvsq.cprog.collex.NomMachine;
 
-import fr.uvsq.cprog.dns.AdresseIP;
-import fr.uvsq.cprog.dns.Commande;
-import fr.uvsq.cprog.dns.Dns;
-import fr.uvsq.cprog.dns.NomMachine;
+import fr.uvsq.cprog.collex.commandes.Commande;
 
-/**
- * Ajoute un nouvel item (nom + adresse) dans le DNS.
- */
 public class CommandeAddItem implements Commande {
    private final Dns dns;
    private final String ip;

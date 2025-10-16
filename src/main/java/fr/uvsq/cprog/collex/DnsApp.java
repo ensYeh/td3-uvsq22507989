@@ -1,15 +1,21 @@
 package fr.uvsq.cprog.collex;
 
+import java.io.IOException;
+import java.nio.file.Paths;
+
 // package fr.uvsq.cprog.dns;
 
-import fr.uvsq.cprog.collex.commandes.*;
+// import fr.uvsq.cprog.collex.commandes.*;
+import fr.uvsq.cprog.collex.commandes.Commande;
 import java.util.Scanner;
 
 public class DnsApp {
 
-   public static void main(String[] args) {
+   public static void main(String[] args) throws IOException {
       // Chargement du fichier à partir du fichier de configuration
-      Dns dns = new Dns("src/main/resources/data/dns.txt");
+      // Dns dns = new Dns("src/main/resources/data/dns.txt");
+      Dns dns = new Dns(Paths.get("src/main/resources/data/dns.txt"));
+
       DnsTUI tui = new DnsTUI(dns);
 
       System.out.println("=== Simulation DNS ===");

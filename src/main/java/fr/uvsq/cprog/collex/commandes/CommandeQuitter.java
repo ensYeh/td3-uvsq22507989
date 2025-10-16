@@ -2,7 +2,7 @@ package fr.uvsq.cprog.collex.commandes;
 
 // package fr.uvsq.cprog.dns.commandes;
 
-import fr.uvsq.cprog.dns.Commande;
+import fr.uvsq.cprog.collex.commandes.Commande;
 
 public class CommandeQuitter implements Commande {
 

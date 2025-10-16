@@ -2,10 +2,10 @@ package fr.uvsq.cprog.collex.commandes;
 
 // package fr.uvsq.cprog.dns.commandes;
 
-import fr.uvsq.cprog.dns.AdresseIP;
-import fr.uvsq.cprog.dns.Commande;
-import fr.uvsq.cprog.dns.Dns;
-import fr.uvsq.cprog.dns.DnsItem;
+import fr.uvsq.cprog.collex.AdresseIP;
+import fr.uvsq.cprog.collex.commandes.Commande;
+import fr.uvsq.cprog.collex.Dns;
+import fr.uvsq.cprog.collex.DnsItem;
 
 public class CommandeRechercheNom implements Commande {
    private final Dns dns;
@@ -22,6 +22,6 @@ public class CommandeRechercheNom implements Commande {
       if (item == null) {
          return "Aucun nom trouvé pour " + ip;
       }
-      return item.getNomMachine().toString();
+      return item.getNom().toString();
    }
 }
