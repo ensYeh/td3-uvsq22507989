@@ -1,7 +1,5 @@
 package fr.uvsq.cprog.collex.commandes;
 
-// package fr.uvsq.cprog.dns.commandes;
-
 import fr.uvsq.cprog.collex.AdresseIP;
 import fr.uvsq.cprog.collex.commandes.Commande;
 import fr.uvsq.cprog.collex.Dns;

@@ -2,7 +2,7 @@ package fr.uvsq.cprog.collex.commandes;
 
 import fr.uvsq.cprog.collex.Dns;
 import fr.uvsq.cprog.collex.DnsItem;
-import fr.uvsq.cprog.collex.commandes.Commande; // ← bon import
+import fr.uvsq.cprog.collex.commandes.Commande;
 import java.util.List;
 
 public class CommandeListeDomaine implements Commande {
