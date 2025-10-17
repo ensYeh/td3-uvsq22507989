@@ -14,7 +14,7 @@ public class DnsApp {
    public static void main(String[] args) throws IOException {
       // Chargement du fichier à partir du fichier de configuration
       // Dns dns = new Dns("src/main/resources/data/dns.txt");
-      Dns dns = new Dns(Paths.get("src/main/resources/data/dns.txt"));
+      Dns dns = new Dns(Paths.get("dns.txt"));
 
       DnsTUI tui = new DnsTUI(dns);
 

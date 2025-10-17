@@ -1,0 +1,4 @@
+poste.uvsq.fr 193.51.31.154
+pikachu.uvsq.fr 193.51.25.24
+www.uvsq.fr 193.51.31.90
+ecampus.uvsq.fr 193.51.25.12
