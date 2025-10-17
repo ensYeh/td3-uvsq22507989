@@ -1,5 +1,4 @@
 package fr.uvsq.cprog.collex;
-
 import java.util.Objects;
 
 public class AdresseIP {
