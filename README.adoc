@@ -2,7 +2,7 @@
 = Exercice : Manipulation de collections
 
 [IMPORTANT]
-====
+==== 89, 22507989, Sarah BELMOKHTAR
 Dans cet exercice, vous respecterez les contraintes suivantes:
 
 * Vous utiliserez `git` en effectuant des commits réguliers comportant des messages informatifs.
